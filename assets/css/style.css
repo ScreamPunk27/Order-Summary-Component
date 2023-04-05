@@ -1,0 +1,151 @@
+ @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+:root{
+    --paleBlue:hsl(225, 100%, 94%);
+    --brightBlue:hsl(245, 75%, 52%);
+    --veryPaleBlue:hsl(225, 100%, 98%);
+    --desaturatedBlue:hsl(224, 23%, 55%);
+    --darkBlue:hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  padding: 1rem;
+  background:var(--paleBlue);
+}
+
+#component{
+    font-family: 'Red Hat Display',sans-serif;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+
+
+.component__heading, .component__prices, .component__buttons{
+    padding: 0 1rem;
+}
+
+.component__header{
+    width: 100%;
+}
+
+.component__header img{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.component__heading{
+    margin: 1rem 0;
+}
+
+.component__heading h1{
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin: .5rem 0;
+}
+
+.component__heading p{
+    color: var(--desaturatedBlue);
+    line-height: 1.5rem;
+    padding: 0 1.2rem;
+    font-size: .9rem;
+}
+
+.component__prices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: .9rem;
+}
+
+.component__prices a{
+    font-weight: 700;
+    color: var(--brightBlue);
+    cursor: pointer;
+}
+
+.prices{
+    color: var(--desaturatedBlue);
+    text-align: left;
+    margin: 0 3rem 0 3rem;
+}
+
+.prices p:nth-child(1){
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.component__buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+}
+
+.component__buttons button{
+    width: 90%;
+    padding: .7rem;
+    font-family: 'Red Hat Display',sans-serif;
+    font-size: .9rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.component__buttons button:nth-child(1){
+    background-color: var(--brightBlue);
+    color: #fff;
+    margin-bottom: .5rem;
+    border-radius: 12px;
+}
+
+.component__buttons button:nth-child(2){
+    background-color: transparent;
+    color: var(--desaturatedBlue);
+    margin-bottom: .5rem;
+}
+
+
+/*HOVER EFFECTS*/
+
+.component__buttons button:nth-child(1):hover, .component__prices a:hover{
+    opacity: .8;
+}
+
+.component__buttons button:nth-child(2):hover{
+    color: #000;
+}
+
+.component__prices a:hover{
+    text-decoration: none;
+}
+
+
+@media screen and (min-width:400px){
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color:var(--paleBlue);
+        background-image: url('../img/pattern-background-desktop.svg');
+       background-repeat: no-repeat;
+    }
+    
+    #component{
+        width: 375px;
+    }
+}
